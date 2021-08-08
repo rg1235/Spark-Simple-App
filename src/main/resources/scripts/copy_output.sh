@@ -6,4 +6,4 @@ fi
 mkdir -p $1
 cp -R /opt/workspace/data/temp_output/* $1
 # Deleting temp_output directory post copying the data
-# rm -r /opt/workspace/data/temp_output/
+rm -r /opt/workspace/data/temp_output/
