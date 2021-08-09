@@ -16,7 +16,7 @@ object ProductsIngestion {
     val outputConfig: Config = config.getConfig(OutputConfig)
 
     //read raw data from csv
-    val df: DataFrame = readDataFrame(inputConfig)
+    val df: DataFrame = readDataFrame(inputConfig).dropDuplicates()
 
     // Create a broadcast variable for epoch timestamp in seconds
     val current_time: Long = System.currentTimeMillis() / 1000
